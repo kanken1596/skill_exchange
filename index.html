@@ -10,9 +10,9 @@
     <!-- 頁首區塊 -->
     <header>
         <div class="container">
-            <div class="logo">技能交換平台</div>
+            <h1>技能交換平台</h1>
             <nav>
-                <ul>
+                <ul class="list">
                     <li><a href="#">首頁</a></li>
                     <li><a href="#">尋找技能</a></li>
                     <li><a href="#">提供技能</a></li>
@@ -20,7 +20,7 @@
                     <li><a href="#">登入/註冊</a></li>
                 </ul>
             </nav>
-            <div style="clear: both;"></div>  <!-- 清除浮動 -->
+            <!-- <div style="clear: both;"></div> 清除浮動 -->
         </div>
     </header>
 
@@ -28,21 +28,26 @@
     <main>
         <!-- 側邊欄區塊 -->
         <aside>
-            <div class="container">
-                <h2>熱門技能</h2>
-                <ul>
-                    <li><a href="#">程式設計</a></li>
-                    <li><a href="#">語言學習</a></li>
-                    <li><a href="#">烹飪技巧</a></li>
-                    <li><a href="#">攝影技巧</a></li>
-                </ul>
-            </div>
+            <h2>技能分類</h2>
+            <ul class="list">
+                <li><a href="#">程式設計</a></li>
+                <li><a href="#">語言學習</a></li>
+                <li><a href="#">烹飪技巧</a></li>
+                <li><a href="#">攝影技巧</a></li>
+            </ul>
+            <h2>熱門標籤</h2>
+            <ul class="list">
+                <li><a href="#">#Python</a></li>
+                <li><a href="#">#日語</a></li>
+                <li><a href="#">#烹飪</a></li>
+                <li><a href="#">#攝影</a></li>
+            </ul>
         </aside>
 
         <!-- 文章內容區塊 -->
-        <section>
+        <section class="hero-section">
             <h2>最新技能發布</h2>
-            <div class="container">
+            <div >
                 <div class="skill-post">
                     <h3>學習Python程式設計</h3>
                     <p>提供者：Alice</p>

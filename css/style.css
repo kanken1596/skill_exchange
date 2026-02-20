@@ -11,21 +11,28 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 header {
-    background-color: #a7b342;
+    background-color: #755b23;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex; /*將header 設為Flex容器*/
+    justify-content: space-between; /*將子元素（logo和nav）分散對齊*/
+    align-items: center; /*垂直置中對齊子元素 */
 }
-header .logo {
-    float: left;
+header h1 {
     margin-left: 20px;
+    margin-right: auto; /*將h1推到左邊，nav推到右邊*/
     font-size: 24px;
-    font-weight: bold;
 }
-nav{
-    float: right;
-    margin-right: 20px;
+nav {
+    /* 將nav設為Flex容器，讓ul水平排列 */
+    margin-left: auto; /* 將nav推到右邊 */
+    display: flex;
 }
 nav ul {
     list-style: none;
@@ -42,3 +49,76 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
 }
+main {
+    display: flex;
+    padding: 20px; 
+    gap: 20px; /*增加主內容區塊和側邊欄之間的間距*/
+}
+aside {
+    width: 0 0 250px; /*側邊欄固定寬度*/
+    background-color: #d7bd85;
+    padding: 20px;
+    border-radius: 5px;
+     /* 將aside設為Flex容器，讓內容垂直置中 */
+     display: flex;
+     flex-direction: column; /* 讓子元素垂直排列 */
+}
+section.hero-section {
+    flex: 1; /*讓主內容區塊占滿剩餘空間*/
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+aside h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #160d01;
+}
+aside ul li {
+    margin-bottom: 10px;
+}
+aside ul li a {
+    color: #684215;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+aside p a {
+    color: #684215;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.hero-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #160d01;
+}
+.hero-section .skill-post {
+    margin-bottom: 20px;
+}
+.hero-section .skill-post h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: black;
+}
+.hero-section .skill-post p {
+    margin: 20px;
+    color: #555;
+}
+.hero-section .skill-post button {
+    background-color: #755b23;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
