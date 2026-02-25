@@ -1,10 +1,31 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
+    height: 100vh; /*確保body占滿整個視口高度*/
+    width: 100%; /*確保body占滿整個頁面寬度*/
+}
+
+h2 {
+    margin: 20px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #160d01;
+}
+h3 {
+    margin: 20px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+p {
+    margin: 20px;
+    font-size: 16px;
+    color: #555;
 }
 .list {
     list-style: none;
@@ -14,6 +35,7 @@ body {
 header {
     background-color: #755b23;
     color: #fff;
+    font-weight: bold;
     padding: 20px 40px;
     display: flex; /*將header 設為Flex容器*/
     justify-content: space-between; /*將子元素（logo和nav）分散對齊*/
@@ -21,27 +43,23 @@ header {
     width: 100%;
     box-sizing: border-box;
 }
-header h1 {
-    margin-left: 20px;
-    margin-right: auto; /* 將h1推到左邊，nav推到右邊 */
-    font-size: 24px;
+
+.header-logo {
+    margin: 20px 0;
+    font-size: 26px;
     flex-shrink: 0; /*防止h1縮小 */
 }
-nav {
-    /* 將nav設為Flex容器，讓ul水平排列 */
-     margin-left: auto; /*將nav推到右邊*/
-}
-nav ul {
+.nav-ul {
+    margin: 20px 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex; /*讓ul水平排列 */
+    justify-content: space-evenly; /*讓li平均分布 */
+    padding-left: 0px; /*移除ul的左邊距 */
 }
-nav ul li {
-    /* display: inline-block; */
-    margin-right: 25px;
+.nav-li{
+    padding: 0px 20px; /*增加點擊區域 */
 }
-nav ul li a {
+.nav-a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -53,7 +71,7 @@ main {
     gap: 20px; /*增加主內容區塊和側邊欄之間的間距*/
 }
 aside {
-    width: 0 0 250px; /*側邊欄固定寬度*/
+    width: 150px; /*側邊欄固定寬度*/
     background-color: #d7bd85;
     padding: 20px;
     border-radius: 5px;
@@ -61,7 +79,7 @@ aside {
      display: flex;
      flex-direction: column; /* 讓子元素垂直排列 */
 }
-section .hero-section {
+.main-content {
     flex: 1; /*讓主內容區塊占滿剩餘空間*/
     background-color: #fff;
     padding: 20px;
@@ -73,51 +91,53 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 40px;
+
+    position: fixed; /*將footer固定在頁面底部 */
+    bottom: 0; /*距離頁面底部0 */
+    width: 100%; /*讓footer占滿整個頁面寬度 */
+    /* 如果不用 width:100%; 的話 footer會縮在左下角*/
 }
 
 
-aside h2 {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #160d01;
-}
-aside ul li {
-    margin-bottom: 10px;
-}
-aside ul li a {
-    color: #684215;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-aside p a {
-    color: #684215;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+.side-header {
+    margin: 0px;
     display: block;
-    margin-bottom: 10px;
-}
-.hero-section h2 {
+    padding: 10px;
     font-size: 24px;
-    margin-bottom: 20px;
+    font-weight: bold;
     color: #160d01;
 }
-.hero-section .skill-post {
+.side-ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+.side-li {
+    padding: 10px 0;
+}
+.side-a {
+    color: #684215;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Content */
+.content-head {
+    margin: 0px;
+    padding: 10px;
+}
+.skill-post {
     margin-bottom: 20px;
 }
-.hero-section .skill-post h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: black;
+.post-head {
+    margin: 0px;
+    padding: 10px;
 }
-.hero-section .skill-post p {
-    margin: 20px;
-    font-size: 16px;
-    color: #555;
-}
-.hero-section .skill-post button {
+
+
+
+button {
     background-color: #755b23;
     color: white;
     border: none;
