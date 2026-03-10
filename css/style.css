@@ -36,12 +36,18 @@ header {
     background-color: #755b23;
     color: #fff;
     font-weight: bold;
-    padding: 20px 40px;
+    padding: 10px 20px;
     display: flex; /*將header 設為Flex容器*/
     justify-content: space-between; /*將子元素（logo和nav）分散對齊*/
     align-items: center; /*垂直置中對齊子元素 */
     width: 100%;
     box-sizing: border-box;
+
+    /* 更新程式碼 */
+        position: fixed; /*將header固定在頁面頂部 */
+        top: 0; /*距離頁面頂部0 */
+        left: 0; /*距離頁面左邊0 */
+        z-index: 1000; /*確保header在其他元素之上 */
 }
 
 .header-logo {
@@ -67,24 +73,39 @@ header {
 }
 main {
     display: flex;
-    padding: 20px; 
-    gap: 20px; /*增加主內容區塊和側邊欄之間的間距*/
+    padding: 15px; 
+    gap: 15px; /*增加主內容區塊和側邊欄之間的間距*/
+    position: fixed;      /* 固定位置 */
+    top: 90px;            /* 距離頂部 = header 高度 */
+    left: 0;
+    right: 0;
+    bottom: 80px;         /* 距離底部 = footer 高度 */
+    overflow: hidden;     /* main 本身不滾動 */
+    box-sizing: border-box;
 }
 aside {
     width: 150px; /*側邊欄固定寬度*/
     background-color: #d7bd85;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
      /* 將aside設為Flex容器，讓內容垂直置中 */
      display: flex;
      flex-direction: column; /* 讓子元素垂直排列 */
+
+     /* 更新 */
+     flex-shrink: 0; /*防止aside縮小 */
+        overflow-y: auto; /*讓側邊欄垂直滾動*/
 }
 .main-content {
     flex: 1; /*讓主內容區塊占滿剩餘空間*/
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* 更新 */
+    overflow-y: auto; /*讓主內容區塊垂直滾動*/
+    overflow-x: hidden; /*禁止主內容區塊水平滾動*/
 }
 footer {
     background-color: #755b23;
