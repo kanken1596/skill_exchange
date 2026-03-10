@@ -134,9 +134,6 @@ footer {
     margin: 0px;
     padding: 10px;
 }
-
-
-
 button {
     background-color: #755b23;
     color: white;
@@ -146,4 +143,9 @@ button {
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+}
+
+.footer-text {
+
+    color: #fff;
 }
