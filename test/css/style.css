@@ -1,0 +1,173 @@
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    height: 100vh; /*確保body占滿整個視口高度*/
+    width: 100%; /*確保body占滿整個頁面寬度*/
+}
+
+h2 {
+    margin: 20px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #160d01;
+}
+h3 {
+    margin: 20px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+p {
+    margin: 20px;
+    font-size: 16px;
+    color: #555;
+}
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: #755b23;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex; /*將header 設為Flex容器*/
+    justify-content: space-between; /*將子元素（logo和nav）分散對齊*/
+    align-items: center; /*垂直置中對齊子元素 */
+    width: 100%;
+    box-sizing: border-box;
+
+    /* 更新程式碼 */
+        position: fixed; /*將header固定在頁面頂部 */
+        top: 0; /*距離頁面頂部0 */
+        left: 0; /*距離頁面左邊0 */
+        z-index: 100; /*確保header在其他元素之上 */
+}
+
+.header-logo {
+    margin: 20px 0;
+    font-size: 26px;
+    flex-shrink: 0; /*防止h1縮小 */
+}
+.nav-ul {
+    margin: 20px 0;
+    list-style: none;
+    display: flex; /*讓ul水平排列 */
+    justify-content: space-evenly; /*讓li平均分布 */
+    padding-left: 0px; /*移除ul的左邊距 */
+}
+.nav-li{
+    padding: 0px 20px; /*增加點擊區域 */
+}
+.nav-a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+main {
+    display: flex;
+    padding: 15px; 
+    gap: 15px; /*增加主內容區塊和側邊欄之間的間距*/
+    position: fixed;      /* 固定位置 */
+    top: 90px;            /* 距離頂部 = header 高度 */
+    left: 0;
+    right: 0;
+    bottom: 80px;         /* 距離底部 = footer 高度 */
+    overflow: hidden;     /* main 本身不滾動 */
+    box-sizing: border-box;
+}
+aside {
+    width: 150px; /*側邊欄固定寬度*/
+    background-color: #d7bd85;
+    padding: 15px;
+    border-radius: 5px;
+     /* 將aside設為Flex容器，讓內容垂直置中 */
+     display: flex;
+     flex-direction: column; /* 讓子元素垂直排列 */
+
+     /* 更新 */
+     flex-shrink: 0; /*防止aside縮小 */
+        overflow-y: auto; /*讓側邊欄垂直滾動*/
+}
+.main-content {
+    flex: 1; /*讓主內容區塊占滿剩餘空間*/
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* 更新 */
+    overflow-y: auto; /*讓主內容區塊垂直滾動*/
+    overflow-x: hidden; /*禁止主內容區塊水平滾動*/
+}
+footer {
+    background-color: #755b23;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+    position: fixed; /*將footer固定在頁面底部 */
+    bottom: 0; /*距離頁面底部0 */
+    width: 100%; /*讓footer占滿整個頁面寬度 */
+    /* 如果不用 width:100%; 的話 footer會縮在左下角*/
+    z-index: 100; /*確保footer在其他元素之上 */
+}
+
+
+.side-header {
+    margin: 0px;
+    display: block;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #160d01;
+}
+.side-ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+.side-li {
+    padding: 10px 0;
+}
+.side-a {
+    color: #684215;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Content */
+.content-head {
+    margin: 0px;
+    padding: 10px;
+}
+.skill-post {
+    margin-bottom: 20px;
+}
+.post-head {
+    margin: 0px;
+    padding: 10px;
+}
+button {
+    background-color: #755b23;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-text {
+
+    color: #fff;
+}
